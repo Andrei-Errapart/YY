@@ -1,0 +1,30 @@
+﻿<Window 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:yy="clr-namespace:YY;assembly=YY"
+    Title="YY tester" Height="600" Width="600">
+    <Window.Resources>
+        <Style x:Key="BaseStyle">
+            <Setter Property="Control.Padding" Value="5" />
+            <Setter Property="Control.Margin" Value="5" />
+        </Style>
+        <Style TargetType="Button" BasedOn="{StaticResource BaseStyle}">
+            <Setter Property="Button.MinWidth" Value="65" />
+        </Style>
+        <Style TargetType="TextBlock" BasedOn="{StaticResource BaseStyle}">
+            <Setter Property="Control.VerticalAlignment" Value="Center" />
+        </Style>
+        <Style TargetType="TextBox" BasedOn="{StaticResource BaseStyle}">
+            <Setter Property="Control.VerticalAlignment" Value="Center" />
+        </Style>
+        <Style TargetType="PasswordBox" BasedOn="{StaticResource BaseStyle}">
+            <Setter Property="Control.VerticalAlignment" Value="Center" />
+        </Style>
+    </Window.Resources>
+    <DockPanel>
+        <UniformGrid DockPanel.Dock="Bottom" Columns="1" Rows="1">
+            <Button Name="buttonRegenerate" Content="Regenerate" />
+        </UniformGrid>
+        <yy:PlcChart Name="chart" TimeBegin="2013-01-11" TimeEnd="2013-01-31" />
+    </DockPanel>
+</Window>
