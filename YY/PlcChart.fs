@@ -1,4 +1,5 @@
-﻿namespace YY
+﻿// Trivial change
+namespace YY
     open System
     open System.Collections.Generic
     open System.Windows
